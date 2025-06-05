@@ -1,0 +1,21 @@
+.DS_Store
+
+data/
+
+#jupyter notebook
+.ipynb_checkpoints
+*.ipynb
+
+__pycache__
+
+output_dir/*
+
+wandb
+
+# Ignore further checkpoints
+*.pth
+
+# pixi environments
+.pixi
+*.egg-info
+venv/

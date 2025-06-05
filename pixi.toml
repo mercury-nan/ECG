@@ -1,0 +1,27 @@
+[workspace]
+authors = ["seven-mile <i@7li.moe>"]
+channels = ["conda-forge"]
+name = "ecg-dl"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+data = "python utils/data_utils.py"
+train = "python train.py"
+evaluate = "python evaluation.py"
+
+[dependencies]
+python = "3.11.*"
+
+[pypi-options]
+index-url = "https://mirrors.sustech.edu.cn/pypi/web/simple"
+
+[pypi-dependencies]
+torch = ">=2.7.0, <3"
+pywavelets = ">=1.8.0, <2"
+ptwt = ">=0.1.9, <0.2"
+pandas = ">=2.2.3, <3"
+scikit-learn = ">=1.6.1, <2"
+wfdb = ">=4.3.0, <5"
+pycm = ">=4.3, <5"
+wandb = ">=0.19.11, <0.20"
